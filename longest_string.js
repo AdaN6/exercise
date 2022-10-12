@@ -7,16 +7,19 @@ const findlongestWord = () => {
     let splitSentence =
       "The emergency scheme started after September's mini-budget, which spooked markets and drove up borrowing costs.".split(' '
       );
-    let longestWord = 0;
+    let longestWordNum = 0;
+    let longestWord = '';
 
     for (let i = 0; i < splitSentence.length; i++) {
-      if (splitSentence[i].length > longestWord) {
-        longestWord = splitSentence[i].length;
+      if (splitSentence[i].length > longestWordNum) {
+        longestWordNum = splitSentence[i].length;
+        longestWord = splitSentence[i];
       }
     }
-  
-    return longestWord;
+        console.log(`word "${longestWord}" is the longest being ${longestWordNum} characters long`)
 }
 
-console.log(findlongestWord());
+findlongestWord()
+  
+
 
